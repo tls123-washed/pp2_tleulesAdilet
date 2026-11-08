@@ -85,6 +85,12 @@ def delete_contact(first_name):
     conn.close()
     print(f"Contact {first_name} deleted.")
 
+def search():
+    number = input()
+    sql = f"SELECT phone_number FROM PP2 IF {number} = phone_number"
+    
+
+
 if __name__ == '__main__':
     # 1. Создаем таблицу
     create_tables()
@@ -103,3 +109,7 @@ if __name__ == '__main__':
     
     # 6. Удаляем тестовый контакт
     delete_contact('TestUser')
+    
+    search()
+    
+    
